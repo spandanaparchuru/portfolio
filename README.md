@@ -1,81 +1,29 @@
-# API Health Monitor
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Build](https://img.shields.io/badge/Build-Passing-success)
+![Status](https://img.shields.io/badge/Status-Portfolio%20Ready-003336)
 
-A lightweight Spring Boot application that monitors external APIs, tracks latency, and automatically creates incidents after repeated failures.
+## API Health Monitor (Spring Boot)
 
----
+Production APIs can fail quietly — and teams often find out only after users report issues.  
+This project is a lightweight monitoring + incident workflow service that checks endpoints on a schedule, captures latency/status, and automatically creates incidents after repeated failures.
 
-## Features
+**What it demonstrates:**
+- Production-style health monitoring & failure detection
+- Incident creation after 3 consecutive failures (noise-controlled)
+- Manual resolution workflow (OPEN → RESOLVED)
+- RESTful API design with persistence (JPA + H2)
+- Simple dashboard UI for quick visibility
 
-- Monitor multiple endpoints (GET support)
-- Track response latency and HTTP status
-- Automatically create incidents after 3 consecutive failures
-- Resolve incidents via REST API
-- Simple dashboard view
+flowchart TD
+  U[User / Postman / Dashboard] -->|REST calls| C[Spring Boot Controllers]
+  C --> S[Monitoring Service<br/>Scheduled Health Checks]
+  S -->|HTTP requests| E[External APIs / Endpoints]
+  S --> R[(H2 Database)]
+  R -->|stores| H[HealthCheckResult]
+  R -->|stores| I[Incident]
+  C --> R
+  D[dashboard.html] -->|fetch /api/results & /api/incidents| C
 
----
 
-## Architecture
 
-- Spring Boot
-- H2 In-Memory Database
-- REST Controllers
-- JPA Repositories
-- Scheduled Health Checks
-
----
-
-## Demo Flow
-
-### 1 Successful Health Check
-
-![Results Screenshot](screenshots\GET_method_results.png)
-
-System tracks:
-- statusCode
-- latencyMs
-- success flag
-
----
-
-![Dashboard Screenshot With Failed Endpoint](screenshots\Dashboard_with_failed_endpoints_logged.png)
-
-Failed endpoint detected, logged in the dashboard.
-
-### 2 Automatic Incident Creation
-
-![Incident Open Screenshot](screenshots\Get_method_after_incident_creation.png)
-
-![Open Incident In Dashboard](screenshots\Dashboard_after_incident_creation.png)
-
-After 3 consecutive failures:
-- Incident created automatically
-- Status = OPEN
-
----
-
-### 3 Incident Resolution
-
-![Incident Resolved Screenshot](screenshots\Get_method_after_incident_resolution.png)
-
-![Incident Resolved In Dashboard](screenshots\Dashboard_after_incident_resolution.png)
-
-PATCH endpoint updates status to RESOLVED.
-
----
-
-## Project Impact & Benefits
-
-This project demonstrates:
-
-- Production reliability engineering thinking
-- Failure detection logic
-- Incident lifecycle handling
-- API monitoring design
-- Backend REST development
-
----
-
-## How to Run
-
-```bash
-./mvnw spring-boot:run (or) .\mvnw.cmd clean spring-boot:run(recommended)
