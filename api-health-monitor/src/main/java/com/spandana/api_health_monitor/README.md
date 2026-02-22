@@ -28,7 +28,7 @@ A lightweight Spring Boot application that monitors external APIs, tracks latenc
 
 ### 1 Successful Health Check
 
-![Results Screenshot](screenshots\GET_method_results.png)
+![Results Screenshot](./screenshots/GET_method_results.png)
 
 System tracks:
 - statusCode
@@ -37,15 +37,15 @@ System tracks:
 
 ---
 
-![Dashboard Screenshot With Failed Endpoint](screenshots\Dashboard_with_failed_endpoints_logged.png)
+![Dashboard Screenshot With Failed Endpoint](./screenshots/Dashboard_with_failed_endpoints_logged.png)
 
 Failed endpoint detected, logged in the dashboard.
 
 ### 2 Automatic Incident Creation
 
-![Incident Open Screenshot](screenshots\Get_method_after_incident_creation.png)
+![Incident Open Screenshot](./screenshots/Get_method_after_incident_creation.png)
 
-![Open Incident In Dashboard](screenshots\Dashboard_after_incident_creation.png)
+![Open Incident In Dashboard](./screenshots/Dashboard_after_incident_creation.png)
 
 After 3 consecutive failures:
 - Incident created automatically
@@ -55,9 +55,9 @@ After 3 consecutive failures:
 
 ### 3 Incident Resolution
 
-![Incident Resolved Screenshot](screenshots\Get_method_after_incident_resolution.png)
+![Incident Resolved Screenshot](./screenshots/Get_method_after_incident_resolution.png)
 
-![Incident Resolved In Dashboard](screenshots\Dashboard_after_incident_resolution.png)
+![Incident Resolved In Dashboard](./screenshots/Dashboard_after_incident_resolution.png)
 
 PATCH endpoint updates status to RESOLVED.
 
