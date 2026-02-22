@@ -20,6 +20,15 @@ Production APIs can fail quietly — and teams often find out only after users r
 
 ---
 
+## Detailed Demo & Screenshots
+
+For full API flow, request/response examples, dashboard screenshots, and incident lifecycle demonstration:
+
+**View the Detailed Project Walkthrough:**  
+[API Health Monitor – Demo & Screenshots](./api-health-monitor/src/main/java/com/spandana/api_health_monitor/README.md)
+
+---
+
 ## Architecture
 
 ```mermaid
