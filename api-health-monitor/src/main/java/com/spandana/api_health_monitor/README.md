@@ -26,7 +26,7 @@ A lightweight Spring Boot application that monitors external APIs, tracks latenc
 
 ## Demo Flow
 
-### 1 Successful Health Check
+### 1. Successful Health Check
 
 ![Results Screenshot](./screenshots/GET_method_results.png)
 
@@ -41,7 +41,7 @@ System tracks:
 
 Failed endpoint detected, logged in the dashboard.
 
-### 2 Automatic Incident Creation
+### 2. Automatic Incident Creation
 
 ![Incident Open Screenshot](./screenshots/Get_method_after_incident_creation.png)
 
@@ -53,7 +53,7 @@ After 3 consecutive failures:
 
 ---
 
-### 3 Incident Resolution
+### 3. Incident Resolution
 
 ![Incident Resolved Screenshot](./screenshots/Get_method_after_incident_resolution.png)
 
