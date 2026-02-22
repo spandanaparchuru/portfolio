@@ -1,4 +1,3 @@
-```markdown
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen)
 ![Java](https://img.shields.io/badge/Java-17-orange)
 ![Build](https://img.shields.io/badge/Build-Passing-success)
@@ -32,3 +31,4 @@ flowchart TD
   R -->|stores| H[HealthCheckResult]
   R -->|stores| I[Incident]
   D[dashboard.html] -->|fetch /api/results & /api/incidents| C
+```
