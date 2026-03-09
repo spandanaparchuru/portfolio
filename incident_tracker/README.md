@@ -79,41 +79,41 @@ Visit: http://localhost:3000/incidents
 
 ## Key Learning Outcomes
 
-Rails MVC structure
+- Rails MVC structure
 
-RESTful routing
+- RESTful routing
 
-Custom controller actions (bulk_delete)
+- Custom controller actions (bulk_delete)
 
-Strong parameters
+- Strong parameters
 
-View partials and reusable forms
+- View partials and reusable forms
 
-UI styling and layout organization
+- UI styling and layout organization
 
-Git & GitHub project structuring
+- Git & GitHub project structuring
 
-Handling timezones in Rails
+- Handling timezones in Rails
 
-Debugging controller routing issues
+- Debugging controller routing issues
 
 ## Future Improvements
 
-User authentication (Devise)
+- User authentication (Devise)
 
-Role-based access control
+- Role-based access control
 
-Pagination
+- Pagination
 
-Search functionality
+- Search functionality
 
-Incident activity timeline
+- Incident activity timeline
 
-API endpoints
+- API endpoints
 
-Dockerization
+- Dockerization
 
-Production deployment (Render / Fly.io)
+- Production deployment (Render / Fly.io)
 
 ## Author
 
