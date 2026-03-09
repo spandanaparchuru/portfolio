@@ -1,0 +1,13 @@
+<div class="incident-page">
+  <div class="incident-card">
+
+    <h2 class="incident-heading">Create New Incident</h2>
+
+    <%= render "form", incident: @incident %>
+
+    <div class="incident-actions">
+      <%= link_to "Back", incidents_path, class: "btn-back" %>
+    </div>
+
+  </div>
+</div>

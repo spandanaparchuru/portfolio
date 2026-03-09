@@ -1,0 +1,54 @@
+<div class="show-wrapper">
+
+  <div class="show-card">
+
+    <h2 class="mb-5">Edit Incident</h2>
+
+    <%= form_with(model: @incident) do |form| %>
+
+      <div class="form-group mb-4">
+        <label class="form-label">Title</label>
+        <%= form.text_field :title, class: "form-control form-control-lg" %>
+      </div>
+
+      <div class="form-group mb-4">
+        <label class="form-label">Description</label>
+        <%= form.text_area :description, rows: 4,
+              class: "form-control form-control-lg" %>
+      </div>
+
+      <div class="form-group mb-4">
+        <label class="form-label">Status</label>
+        <%= form.select :status,
+              ["Open", "InProgress", "Resolved"],
+              {},
+              class: "form-select form-select-lg" %>
+      </div>
+
+      <div class="form-group mb-4">
+        <label class="form-label">Notes</label>
+        <%= form.text_area :notes, rows: 4,
+              class: "form-control form-control-lg",
+              placeholder: "Add progress updates or internal notes..." %>
+      </div>
+
+      <div class="show-buttons">
+        <%= link_to "Back",
+              incident_path(@incident),
+              class: "btn-circle back-btn" %>
+
+        <%= form.submit "Update",
+              class: "btn-circle update-btn border-0" %>
+
+        <%= link_to "Delete",
+              @incident,
+              method: :delete,
+              data: { confirm: "Are you sure?" },
+              class: "btn-circle delete-btn" %>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

@@ -1,0 +1,43 @@
+<div class="show-wrapper">
+
+  <div class="show-card">
+
+    <div class="show-row">
+      <div class="label">Title:</div>
+      <div class="value"><%= @incident.title %></div>
+
+      <div class="timestamp">
+        <strong>Timestamp:</strong>
+        <%= @incident.updated_at.strftime("%d %b %Y %H:%M") %>
+      </div>
+    </div>
+
+    <div class="show-row">
+      <div class="label">Description:</div>
+      <div class="value"><%= @incident.description %></div>
+    </div>
+
+    <div class="show-row">
+      <div class="label">Status:</div>
+      <div class="value"><%= @incident.status %></div>
+    </div>
+
+    <div class="show-row">
+      <div class="label">Notes:</div>
+      <div class="value">
+        <%= @incident.notes.present? ? @incident.notes : "No additional notes" %>
+      </div>
+    </div>
+
+    <div class="show-buttons">
+      <%= link_to "Back", incidents_path, class: "btn-circle back-btn" %>
+      <%= link_to "Update", edit_incident_path(@incident), class: "btn-circle update-btn" %>
+      <%= link_to "Delete", @incident,
+            method: :delete,
+            data: { confirm: "Are you sure?" },
+            class: "btn-circle delete-btn" %>
+    </div>
+
+  </div>
+
+</div>

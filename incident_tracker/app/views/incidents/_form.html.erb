@@ -1,0 +1,27 @@
+<%= form_with(model: incident, local: true) do |form| %>
+
+  <div class="form-row">
+    <label>Title:</label>
+    <%= form.text_field :title, class: "form-input" %>
+  </div>
+
+  <div class="form-row">
+    <label>Description:</label>
+    <%= form.text_area :description, rows: 3, class: "form-input" %>
+  </div>
+
+  <div class="form-row">
+    <label>Status:</label>
+    <%= form.select :status, ["Open", "InProgress", "Resolved"], {}, class: "form-input" %>
+  </div>
+
+  <div class="form-row">
+    <label>Notes:</label>
+    <%= form.text_area :notes, rows: 4, placeholder: "Add progress updates or internal notes...", class: "form-input" %>
+  </div>
+
+  <div class="incident-actions">
+    <%= form.submit incident.persisted? ? "Update" : "Create", class: "btn-update" %>
+  </div>
+
+<% end %>
